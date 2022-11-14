@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- /bootstrap css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>VueJs</title>
+</head>
+<body>
+
+    <div id="app">
+        <!-- forma con v-bind -->
+        <h1 v-bind:class="cssClassesList" class="text-center">{{ message }}</h1>
+        <!-- forma contratta senza v-bind -->
+        <a :class="cssClassesList" href="https://google.com">Google.com</a>
+        <input v-model="message" type="text">
+        <ul>
+            <li v-for="(product, i) in shoppingList">
+                {{ product }} {{ i }}
+            </li>
+        </ul>
+
+        <h2>{{ greetings() }}</h2>
+        <button v-on:click="addElement" class="d-block">Aggiungi alla lista</button>
+        <button @click="prova2">Bottone</button>
+        <button v-on:click="changeMessage" class="d-block">Cambia il valore di message</button>
+        <img :src="image" alt="">
+    </div>
+    <!-- bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- /bootstrap script -->
+    <!-- inclusione vuejscdn -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- /inclusione vuejscdn -->
+    <script src="main.js"></script>
+</body>
+</html>

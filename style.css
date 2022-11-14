@@ -1,0 +1,16 @@
+input{
+    display: block;
+    margin-top: 1.25rem;
+}
+
+li{
+    color: black;
+}
+
+.red{
+    color: red;
+}
+
+.title{
+    font-style: italic;
+}
